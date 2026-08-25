@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Attributes\Guarded;
+use Illuminate\Database\Eloquent\Model;
+
+class Profile extends Model
+{
+     protected $guarded = ['id'];
+     
+    protected $table = 'profiles';
+
+    public function Profile(){
+       return  $this->belongsTo(User::class);
+    }
+}
